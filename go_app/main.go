@@ -13,7 +13,7 @@ func main() {
 	var celsius float64
 
 	// Input
-	fmt.Println("\nThis program coverts an inputted Fahrenheit temperature value into Celsius.")
+	fmt.Println("\nThis program converts an inputted Fahrenheit temperature value into Celsius.")
 	fmt.Println()
 	fmt.Print("Enter the temperature in Fahrenheit (°F): ")
 	fmt.Scanln(&fahrenheit)
