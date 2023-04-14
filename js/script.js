@@ -4,17 +4,18 @@
 // Created on: April 2023
 // This file contains the JS functions for index.html
 
-"use strict";
+"use strict"
 
-function buttonOneClicked() {
-  //This function does XXXX
+function calculatePressed() {
+  //This function converts Fahrenheit into Celsius
   //Input through Textfields
-  const example = parseFloat(document.getElementById("example").value)
+  const fahrenheit = parseFloat(document.getElementById("fahrenheit").value)
 
   //Process
-  const answer = example
+  const celsius = (fahrenheit - 32) * 5/9
+
 
   //Output
   document.getElementById("answer").innerHTML =
-    "The answer is: " + answer.toFixed(2)
+    "This Fahrenheit temperature in Celsius is: " + celsius.toFixed(2) + "°C"
 }

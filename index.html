@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="description" content="My first website with XXXX" />
+    <meta name="description" content="Fahrenheit to Celsius converter" />
     <meta name="keywords" content="mths, ics2o" />
     <meta name="author" content="Jaden Plugowsky" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,13 +14,13 @@
     <!-- Change colours here at https://getmdl.io/customize/index.html -->
     <link
       rel="stylesheet"
-      href="https://code.getmdl.io/1.3.0/material.deep_orange-red.min.css"
+      href="https://code.getmdl.io/1.3.0/material.blue-red.min.css"
     />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link rel="manifest" href="site.webmanifest" />
-    <title>XXXX Website</title>
+    <title>Fahrenheit to Celsius</title>
   </head>
   <body>
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -29,18 +29,20 @@
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       <header class="mdl-layout__header">
         <div class="mdl-layout__header-row">
-          <span class="mdl-layout-title" id="header-fix">Header...</span>
+          <span class="mdl-layout-title" id="header-fix"
+            >Fahrenheit to Celsius</span
+          >
         </div>
       </header>
       <main class="mdl-layout__content">
         <!-- Put non-header content HERE -->
         <br />
         <div class="right-image">
-          <img src="./images/blackholehd.jpg" alt="black hole image" />
+          <img src="./images/fahrenheittocelsius.png" alt="fahrenheit to celsius image" />
         </div>
-        <div class="mdl-content">Enter...</div>
+        <div class="mdl-content">(Fahrenheit - 32) * 5/9 = Celsius</div>
         <br />
-        <!-- Numeric Textfield with Floating Label -->
+        <!-- Numeric Textfield with Floating Label - Fahrenheit -->
         <form action="#">
           <div
             class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
@@ -49,25 +51,29 @@
               class="mdl-textfield__input"
               type="text"
               pattern="-?[.0-9]*(\.[.0-9]+)?"
-              id="example"
+              id="fahrenheit"
             />
-            <label class="mdl-textfield__label" for="example">Number...</label>
-            <span class="mdl-textfield__error">Input is not a number or decimal!</span>
+            <label class="mdl-textfield__label" for="fahrenheit"
+              >Fahrenheit (°F)</label
+            >
+            <span class="mdl-textfield__error"
+              >Input is not a number or decimal!</span
+            >
           </div>
         </form>
         <!-- Colored raised button with ripple -->
         <button
           class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored"
           id="button-one"
-          onclick="buttonOneClicked()"
+          onclick="calculatePressed()"
         >
-          Press
+          Calculate
         </button>
         <br />
         <br />
         <!-- Answer to be replaced using JS -->
         <div class="page-content-answer">
-          <div id="answer">The answer is: ...</div>
+          <div id="answer">This Fahrenheit temperature in Celsius is: ...</div>
         </div>
       </main>
     </div>
